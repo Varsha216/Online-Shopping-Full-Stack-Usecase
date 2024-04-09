@@ -1,0 +1,39 @@
+KAFKA ( kafka_2.13-3.6.1 ):-----:------:-------:-------:-------:-------:-------:--------
+In kafka->config->server.properties, set logs directory
+In kafka->config->zookeeper.properties, set data directory
+
+cmd1 
+C:\kafka>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+cmd2
+C:\kafka>.\bin\windows\kafka-server-start.bat .\config\server.properties
+For error- add listeners=PLAINTEXT://127.0.0.1:9092 in kafka->config->server.properties
+or -> listeners=PLAINTEXT://localhost:9092
+
+cmd3
+C:\kafka\bin\windows>kafka-topics.bat --create --topic varsha --bootstrap-server localhost:9092
+C:\kafka\bin\windows>kafka-topics.bat --list --bootstrap-server localhost:9092
+C:\kafka\bin\windows>kafka-console-producer.bat --broker-list localhost:9092 --topic varsha
+
+cmd4
+C:\kafka\bin\windows>kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic varsha
+
+
+Stop 2-cmds properly to start it next time with no issue->
+.\bin\windows\kafka-server-stop.bat
+.\bin\windows\zookeeper-server-stop.bat
+
+If error when run again next time->
+delete log and data folder :)
+
+
+
+ZIPKIN-----:::------------------------------------------------------
+
+To run zipkin server. Go to the location where zipkin jar file is present and open cmd. 
+Then type cmd:
+	java -jar zipkin-server-3.0.0-rc0-exec
+
+It will run and will give one url. PAste that url in browser.
+
+
