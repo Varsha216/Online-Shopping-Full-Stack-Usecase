@@ -8,7 +8,7 @@ It comprises 7 microservices in the backend-
 4)Auth Service-> Manage authentication using JWT token.
 5)Cloud Gateway-> Manage routing the requests to different microservices after checking credentials.
 6)Cloud Config Server-> Manage external configuration using github.
-7)Service registry-> Keep track of current information of available instances of each microservices in an application.
+7)Service registry-> Keep track of current information of available instances of each microservices in the application.
 
 
 Angular UI- Manage UI for authentication and invokes APIs to create order and fetch order details
