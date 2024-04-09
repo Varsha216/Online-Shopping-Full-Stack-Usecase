@@ -1,6 +1,7 @@
 Made a complete full stack application using Springboot3+ and Angular14+.
 
 It comprises 7 microservices in the backend-
+
 1)Item Service(Core)-> Manage items in the store.
 2)Customer Services(Core) -> Manage registered user. Used in spring security. "CustomerCreated" event is published using apache kafka.
 3)Sales Order Service(Composite)-> Manage order details along with the customer data. Implemented Circuit breaker using Resilience4j and Load balancing.
