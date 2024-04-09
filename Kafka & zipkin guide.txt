@@ -19,7 +19,7 @@ cmd4
 C:\kafka\bin\windows>kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic varsha
 
 
-Stop 2-cmds properly to start it next time with no issue->
+2-cmds to stop kafka & zookeeper server to start it next time with no issue->
 .\bin\windows\kafka-server-stop.bat
 .\bin\windows\zookeeper-server-stop.bat
 
@@ -28,12 +28,12 @@ delete log and data folder :)
 
 
 
-ZIPKIN-----:::------------------------------------------------------
+ZIPKIN-----------------------------------------------------------
 
 To run zipkin server. Go to the location where zipkin jar file is present and open cmd. 
-Then type cmd:
+Then type in cmd:
 	java -jar zipkin-server-3.0.0-rc0-exec
 
-It will run and will give one url. PAste that url in browser.
+It will run and will give one url. Paste that url in browser.
 
 
