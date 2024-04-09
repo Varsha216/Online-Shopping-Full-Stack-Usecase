@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="container my-5">
+
+    <form (ngSubmit)="doRegisteration()">
+        <div class="mb-3">
+            <label for="firstnamefield" class="form-label">First Name</label>
+            <input type="text" [(ngModel)]="customerProfile.firstName" class="form-control" id="custfirstname" name="custfirstname">
+        </div>
+        <div class="mb-3">
+            <label for="lastnamefield" class="form-label">Last Name</label>
+            <input type="text" [(ngModel)]="customerProfile.lastName" class="form-control" id="custlastname" name="custlastname">
+        </div>
+        <div class="mb-3">
+            <label for="emailfield" class="form-label" >Email</label>
+            <input type="text" [(ngModel)]="customerProfile.email" class="form-control" id="custemail" name="custemail">
+        </div>
+        <div class="mb-3">
+            <label for="usernamefield" class="form-label">Username</label>
+            <input type="text" [(ngModel)]="customerProfile.username" class="form-control" id="custUsername" name="custUsername">
+        </div>
+        <div class="mb-3">
+            <label for="passwordfield" class="form-label" >Password</label>
+            <input type="password" [(ngModel)]="customerProfile.password" class="form-control" id="custPassword" name="custPassword">
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+
+    <div class="alert alert-danger error-message" role="alert" *ngIf="message.length>0">
+        {{ message }}
+    </div>
+</div>

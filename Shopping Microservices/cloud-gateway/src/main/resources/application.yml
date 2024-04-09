@@ -1,0 +1,70 @@
+server:
+  port: 9191
+
+
+spring:
+  application:
+    name: API-GATEWAY
+#  main:
+#    allow-circular-references: true
+    
+  config:
+    import: configserver:http://localhost:9292
+  
+  cloud:
+    gateway:
+      default-filters:
+      - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods:
+            - GET
+            - POST
+      routes:
+      - id: AUTH-SERVICE
+        uri: lb://AUTH-SERVICE
+        predicates:
+        - Path=/auth/**
+       
+        
+      - id: CUSTOMER-SERVICE
+        uri: lb://CUSTOMER-SERVICE
+        predicates:
+        - Path=/customer/**
+        filters:
+        - AuthFilter
+        
+      - id: ITEMS-SERVICE
+        uri: lb://ITEMS-SERVICE
+        predicates:
+        - Path=/items/**
+        filters:
+        - AuthFilter
+        
+      - id: SALES-ORDER-SERVICE
+        uri: lb://SALES-ORDER-SERVICE
+        predicates:
+        - Path=/orders/**
+        filters:
+        - AuthFilter
+        
+    config:
+      enabled: true
+     
+     
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  tracing:
+    sampling:
+      probability: 1.0       
+      
+
+
+      

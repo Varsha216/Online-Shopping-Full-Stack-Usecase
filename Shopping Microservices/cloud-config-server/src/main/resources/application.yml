@@ -1,0 +1,17 @@
+
+server:
+  port: 9292
+  
+spring:
+  application:
+    name: cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Varsha216/shopping-config-server/
+          clone-on-start: true
+          ignore-local-ssh-settings: true
+          skip-ssl-validation: true
+  profiles:
+    active: native

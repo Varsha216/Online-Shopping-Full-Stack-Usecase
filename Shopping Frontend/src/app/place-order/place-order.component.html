@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="container">
+        <div class="row col-md-4 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+        <thead>
+            <tr>
+                <th>Item name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of itemList">
+                <td>{{item.name}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.price}}</td>
+                <td class="text-center">
+                    <button *ngIf="!cartStatus.get(item.name)" style="cursor:pointer" type="button" class="btn btn-primary" (click)="addToCart(item.name, item.price)">Buy</button>
+                    <button *ngIf="cartStatus.get(item.name)" style="cursor:pointer" type="button" class="btn btn-secondary" (click)="removeFromCart(item.name, item.price)">Remove</button>
+                </td>
+              </tr>
+        </tbody>
+        </table>
+    </div>
+    <br/>
+    <span>Total Price: {{totalPrice}}</span>
+    <br/>
+    <button style="cursor:pointer; align-items: center;" type="button" class="btn btn-success" (click)="placeOrder()">Submit</button>
+</div>

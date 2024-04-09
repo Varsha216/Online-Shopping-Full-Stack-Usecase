@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="container my-5">
+
+    <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="usernamefield" class="form-label">Username</label>
+            <input type="text" [(ngModel)]="authRequest.username" class="form-control" id="custUsername" name="custUsername">
+        </div>
+        <div class="mb-3">
+            <label for="passwordfield" class="form-label" >Password</label>
+            <input type="password" [(ngModel)]="authRequest.password" class="form-control" id="custPassword" name="custPassword">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+    <div class="alert alert-danger error-message" role="alert" *ngIf="message.length>0">
+        {{ message }}
+    </div>
+</div>

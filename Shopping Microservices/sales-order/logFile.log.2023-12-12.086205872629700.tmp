@@ -1,0 +1,1396 @@
+2023-12-12T19:38:24.703+05:30  INFO 27604 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : Starting SalesOrderApplication using Java 17.0.8.1 with PID 27604 (C:\Users\Madhur_Joshi\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\sales-order\target\classes started by Madhur_Joshi in C:\Users\Madhur_Joshi\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\sales-order)
+2023-12-12T19:38:24.709+05:30  INFO 27604 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-12-12T19:38:24.768+05:30  INFO 27604 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:9292
+2023-12-12T19:38:24.769+05:30  INFO 27604 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=sales-order-service, profiles=[default], label=null, version=d0159b8c96d3ccfcf1fe673b0141b53ea5da77fc, state=null
+2023-12-12T19:38:24.771+05:30  INFO 27604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-12T19:38:24.771+05:30  INFO 27604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-12T19:38:25.850+05:30  INFO 27604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-12T19:38:26.006+05:30  INFO 27604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 147 ms. Found 3 JPA repository interfaces.
+2023-12-12T19:38:26.376+05:30  INFO 27604 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=daf973ec-ed10-328c-8a8a-0639f7c3adec
+2023-12-12T19:38:26.480+05:30  INFO 27604 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'com.varsha.salesorder.feign.ItemsFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-12-12T19:38:27.179+05:30  INFO 27604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-12T19:38:27.188+05:30  INFO 27604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-12T19:38:27.188+05:30  INFO 27604 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-12T19:38:27.267+05:30  INFO 27604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-12T19:38:27.268+05:30  INFO 27604 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2496 ms
+2023-12-12T19:38:27.468+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-12T19:38:27.794+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a44a0d
+2023-12-12T19:38:27.817+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-12T19:38:27.829+05:30  INFO 27604 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/saleorder-items?createDatabaseIfNotExist=true'
+2023-12-12T19:38:28.147+05:30  INFO 27604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-12T19:38:28.230+05:30  INFO 27604 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-12T19:38:28.234+05:30  INFO 27604 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-12T19:38:28.578+05:30  INFO 27604 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-12T19:38:28.651+05:30  WARN 27604 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-12T19:38:28.653+05:30  WARN 27604 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-12-12T19:38:29.514+05:30  INFO 27604 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-12T19:38:29.573+05:30  INFO 27604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-12T19:38:30.122+05:30  WARN 27604 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-12T19:38:30.222+05:30  WARN 27604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-12-12T19:38:30.258+05:30  INFO 27604 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'ITEMS-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2023-12-12T19:38:31.846+05:30  INFO 27604 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-12-12T19:38:31.902+05:30  WARN 27604 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-12-12T19:38:31.928+05:30  INFO 27604 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-12T19:38:32.067+05:30  INFO 27604 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-12-12T19:38:32.112+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-12-12T19:38:32.117+05:30  INFO 27604 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-12T19:38:32.146+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-12-12T19:38:32.146+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-12-12T19:38:32.146+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-12-12T19:38:32.146+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-12-12T19:38:32.146+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-12-12T19:38:32.146+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-12-12T19:38:32.147+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-12-12T19:38:32.397+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-12-12T19:38:32.401+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-12-12T19:38:32.406+05:30  INFO 27604 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-12-12T19:38:32.411+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1702390112411 with initial instances count: 3
+2023-12-12T19:38:32.420+05:30  INFO 27604 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SALES-ORDER-SERVICE with eureka with status UP
+2023-12-12T19:38:32.421+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702390112421, current=UP, previous=STARTING]
+2023-12-12T19:38:32.423+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080: registering service...
+2023-12-12T19:38:32.462+05:30  INFO 27604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-12T19:38:32.463+05:30  INFO 27604 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2023-12-12T19:38:32.490+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - registration status: 204
+2023-12-12T19:38:32.631+05:30  INFO 27604 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group-id-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group-id
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+
+2023-12-12T19:38:32.739+05:30  WARN 27604 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : These configurations '[spring.json.trusted]' were supplied but are not used yet.
+2023-12-12T19:38:32.741+05:30  INFO 27604 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-12-12T19:38:32.741+05:30  INFO 27604 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-12-12T19:38:32.741+05:30  INFO 27604 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1702390112739
+2023-12-12T19:38:32.758+05:30  INFO 27604 --- [restartedMain] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-id-1, groupId=group-id] Subscribed to topic(s): created-customer
+2023-12-12T19:38:32.783+05:30  INFO 27604 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : Started SalesOrderApplication in 9.983 seconds (process running for 10.819)
+2023-12-12T19:38:33.116+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-id-1, groupId=group-id] Resetting the last seen epoch of partition created-customer-0 to 0 since the associated topicId changed from null to HEJIZG1FTryP8VYmDlz6sg
+2023-12-12T19:38:33.118+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-id-1, groupId=group-id] Cluster ID: 6bFUzaUdSxK_E_CjG_f-wA
+2023-12-12T19:38:33.120+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Discovered group coordinator 192.168.1.46:9092 (id: 2147483647 rack: null)
+2023-12-12T19:38:33.122+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] (Re-)joining group
+2023-12-12T19:38:33.138+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Request joining group due to: need to re-join with the given member-id: consumer-group-id-1-638d7cd3-9356-407d-9ee5-0a316b4f7398
+2023-12-12T19:38:33.138+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-12-12T19:38:33.138+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] (Re-)joining group
+2023-12-12T19:38:33.141+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Successfully joined group with generation Generation{generationId=3, memberId='consumer-group-id-1-638d7cd3-9356-407d-9ee5-0a316b4f7398', protocol='range'}
+2023-12-12T19:38:33.144+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Finished assignment for group at generation 3: {consumer-group-id-1-638d7cd3-9356-407d-9ee5-0a316b4f7398=Assignment(partitions=[created-customer-0])}
+2023-12-12T19:38:33.148+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Successfully synced group in generation Generation{generationId=3, memberId='consumer-group-id-1-638d7cd3-9356-407d-9ee5-0a316b4f7398', protocol='range'}
+2023-12-12T19:38:33.149+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Notifying assignor about the new Assignment(partitions=[created-customer-0])
+2023-12-12T19:38:33.153+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Adding newly assigned partitions: created-customer-0
+2023-12-12T19:38:33.159+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Found no committed offset for partition created-customer-0
+2023-12-12T19:38:33.171+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Resetting offset for partition created-customer-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.1.46:9092 (id: 0 rack: null)], epoch=0}}.
+2023-12-12T19:38:33.172+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-id: partitions assigned: [created-customer-0]
+2023-12-12T19:38:33.244+05:30  INFO 27604 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-12T19:38:33.244+05:30  INFO 27604 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-12T19:38:33.245+05:30  INFO 27604 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-12T19:38:33.242+05:30 ERROR 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.kafka.listener.DefaultErrorHandler   : Backoff FixedBackOff{interval=0, currentAttempts=1, maxAttempts=0} exhausted for created-customer-0@0
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener failed
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2946) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.checkDeser(KafkaMessageListenerContainer.java:2994) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2849) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$57(KafkaMessageListenerContainer.java:2772) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at io.micrometer.observation.Observation.lambda$observe$4(Observation.java:544) ~[micrometer-observation-1.11.6.jar:1.11.6]
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603) ~[micrometer-observation-1.11.6.jar:1.11.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:544) ~[micrometer-observation-1.11.6.jar:1.11.6]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2770) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2622) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2508) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2150) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1505) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1469) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1344) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.kafka.support.serializer.DeserializationException: failed to deserialize
+	at org.springframework.kafka.support.serializer.SerializationUtils.deserializationException(SerializationUtils.java:158) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.support.serializer.ErrorHandlingDeserializer.deserialize(ErrorHandlingDeserializer.java:182) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.apache.kafka.clients.consumer.internals.Fetcher.parseRecord(Fetcher.java:1429) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher.access$3400(Fetcher.java:133) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher$CompletedFetch.fetchRecords(Fetcher.java:1661) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher$CompletedFetch.access$1900(Fetcher.java:1497) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher.fetchRecords(Fetcher.java:717) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher.collectFetch(Fetcher.java:683) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.pollForFetches(KafkaConsumer.java:1314) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1243) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1216) ~[kafka-clients-3.4.1.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.14.jar:6.0.14]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:237) ~[spring-aop-6.0.14.jar:6.0.14]
+	at jdk.proxy4/jdk.proxy4.$Proxy196.poll(Unknown Source) ~[na:na]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollConsumer(KafkaMessageListenerContainer.java:1676) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doPoll(KafkaMessageListenerContainer.java:1651) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1452) ~[spring-kafka-3.0.13.jar:3.0.13]
+	... 3 common frames omitted
+Caused by: java.lang.IllegalArgumentException: The class 'com.varsha.customer.entity.Customer' is not in the trusted packages: [java.util, java.lang]. If you believe this class is safe to deserialize, please provide its name. If the serialization is only done by a trusted source, you can also enable trust all (*).
+	at org.springframework.kafka.support.mapping.DefaultJackson2JavaTypeMapper.getClassIdType(DefaultJackson2JavaTypeMapper.java:129) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.support.mapping.DefaultJackson2JavaTypeMapper.toJavaType(DefaultJackson2JavaTypeMapper.java:103) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.support.serializer.JsonDeserializer.deserialize(JsonDeserializer.java:572) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.support.serializer.ErrorHandlingDeserializer.deserialize(ErrorHandlingDeserializer.java:179) ~[spring-kafka-3.0.13.jar:3.0.13]
+	... 22 common frames omitted
+
+2023-12-12T19:38:33.250+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-id-1, groupId=group-id] Seeking to offset 1 for partition created-customer-0
+2023-12-12T19:38:33.733+05:30 ERROR 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.kafka.listener.DefaultErrorHandler   : Backoff FixedBackOff{interval=0, currentAttempts=1, maxAttempts=0} exhausted for created-customer-0@1
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener failed
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2946) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.checkDeser(KafkaMessageListenerContainer.java:2994) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2849) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$57(KafkaMessageListenerContainer.java:2772) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at io.micrometer.observation.Observation.lambda$observe$4(Observation.java:544) ~[micrometer-observation-1.11.6.jar:1.11.6]
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603) ~[micrometer-observation-1.11.6.jar:1.11.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:544) ~[micrometer-observation-1.11.6.jar:1.11.6]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2770) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2622) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2508) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2150) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1505) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1469) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1344) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.kafka.support.serializer.DeserializationException: failed to deserialize
+	at org.springframework.kafka.support.serializer.SerializationUtils.deserializationException(SerializationUtils.java:158) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.support.serializer.ErrorHandlingDeserializer.deserialize(ErrorHandlingDeserializer.java:182) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.apache.kafka.clients.consumer.internals.Fetcher.parseRecord(Fetcher.java:1429) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher.access$3400(Fetcher.java:133) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher$CompletedFetch.fetchRecords(Fetcher.java:1661) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher$CompletedFetch.access$1900(Fetcher.java:1497) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher.fetchRecords(Fetcher.java:717) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher.collectFetch(Fetcher.java:683) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.pollForFetches(KafkaConsumer.java:1314) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1243) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1216) ~[kafka-clients-3.4.1.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.14.jar:6.0.14]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:237) ~[spring-aop-6.0.14.jar:6.0.14]
+	at jdk.proxy4/jdk.proxy4.$Proxy196.poll(Unknown Source) ~[na:na]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollConsumer(KafkaMessageListenerContainer.java:1676) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doPoll(KafkaMessageListenerContainer.java:1651) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1452) ~[spring-kafka-3.0.13.jar:3.0.13]
+	... 3 common frames omitted
+Caused by: java.lang.IllegalArgumentException: The class 'com.varsha.customer.entity.Customer' is not in the trusted packages: [java.util, java.lang]. If you believe this class is safe to deserialize, please provide its name. If the serialization is only done by a trusted source, you can also enable trust all (*).
+	at org.springframework.kafka.support.mapping.DefaultJackson2JavaTypeMapper.getClassIdType(DefaultJackson2JavaTypeMapper.java:129) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.support.mapping.DefaultJackson2JavaTypeMapper.toJavaType(DefaultJackson2JavaTypeMapper.java:103) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.support.serializer.JsonDeserializer.deserialize(JsonDeserializer.java:572) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.support.serializer.ErrorHandlingDeserializer.deserialize(ErrorHandlingDeserializer.java:179) ~[spring-kafka-3.0.13.jar:3.0.13]
+	... 22 common frames omitted
+
+2023-12-12T19:38:33.738+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-id-1, groupId=group-id] Seeking to offset 2 for partition created-customer-0
+2023-12-12T19:38:34.247+05:30 ERROR 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.kafka.listener.DefaultErrorHandler   : Backoff FixedBackOff{interval=0, currentAttempts=1, maxAttempts=0} exhausted for created-customer-0@2
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener failed
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2946) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.checkDeser(KafkaMessageListenerContainer.java:2994) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2849) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$57(KafkaMessageListenerContainer.java:2772) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at io.micrometer.observation.Observation.lambda$observe$4(Observation.java:544) ~[micrometer-observation-1.11.6.jar:1.11.6]
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603) ~[micrometer-observation-1.11.6.jar:1.11.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:544) ~[micrometer-observation-1.11.6.jar:1.11.6]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2770) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2622) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2508) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2150) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1505) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1469) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1344) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.kafka.support.serializer.DeserializationException: failed to deserialize
+	at org.springframework.kafka.support.serializer.SerializationUtils.deserializationException(SerializationUtils.java:158) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.support.serializer.ErrorHandlingDeserializer.deserialize(ErrorHandlingDeserializer.java:182) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.apache.kafka.clients.consumer.internals.Fetcher.parseRecord(Fetcher.java:1429) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher.access$3400(Fetcher.java:133) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher$CompletedFetch.fetchRecords(Fetcher.java:1661) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher$CompletedFetch.access$1900(Fetcher.java:1497) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher.fetchRecords(Fetcher.java:717) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.Fetcher.collectFetch(Fetcher.java:683) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.pollForFetches(KafkaConsumer.java:1314) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1243) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1216) ~[kafka-clients-3.4.1.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.14.jar:6.0.14]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:237) ~[spring-aop-6.0.14.jar:6.0.14]
+	at jdk.proxy4/jdk.proxy4.$Proxy196.poll(Unknown Source) ~[na:na]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollConsumer(KafkaMessageListenerContainer.java:1676) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doPoll(KafkaMessageListenerContainer.java:1651) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1452) ~[spring-kafka-3.0.13.jar:3.0.13]
+	... 3 common frames omitted
+Caused by: java.lang.IllegalArgumentException: The class 'com.varsha.customer.entity.Customer' is not in the trusted packages: [java.util, java.lang]. If you believe this class is safe to deserialize, please provide its name. If the serialization is only done by a trusted source, you can also enable trust all (*).
+	at org.springframework.kafka.support.mapping.DefaultJackson2JavaTypeMapper.getClassIdType(DefaultJackson2JavaTypeMapper.java:129) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.support.mapping.DefaultJackson2JavaTypeMapper.toJavaType(DefaultJackson2JavaTypeMapper.java:103) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.support.serializer.JsonDeserializer.deserialize(JsonDeserializer.java:572) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.support.serializer.ErrorHandlingDeserializer.deserialize(ErrorHandlingDeserializer.java:179) ~[spring-kafka-3.0.13.jar:3.0.13]
+	... 22 common frames omitted
+
+2023-12-12T19:43:32.160+05:30  INFO 27604 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-12T19:45:23.276+05:30  INFO 27604 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-12T19:45:23.278+05:30  INFO 27604 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SALES-ORDER-SERVICE with eureka with status DOWN
+2023-12-12T19:45:23.278+05:30  INFO 27604 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702390523278, current=DOWN, previous=UP]
+2023-12-12T19:45:23.278+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080: registering service...
+2023-12-12T19:45:23.284+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Revoke previously assigned partitions created-customer-0
+2023-12-12T19:45:23.285+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-id: partitions revoked: [created-customer-0]
+2023-12-12T19:45:23.285+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Member consumer-group-id-1-638d7cd3-9356-407d-9ee5-0a316b4f7398 sending LeaveGroup request to coordinator 192.168.1.46:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-12-12T19:45:23.286+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - registration status: 204
+2023-12-12T19:45:23.286+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-12-12T19:45:23.286+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Request joining group due to: consumer pro-actively leaving the group
+2023-12-12T19:45:23.286+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-id-1, groupId=group-id] Unsubscribed all topics or patterns and assigned partitions
+2023-12-12T19:45:23.287+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-12-12T19:45:23.288+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Request joining group due to: consumer pro-actively leaving the group
+2023-12-12T19:45:23.292+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-12-12T19:45:23.292+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-12T19:45:23.292+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-12-12T19:45:23.296+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group-id-1 unregistered
+2023-12-12T19:45:23.296+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-id: Consumer stopped
+2023-12-12T19:45:23.308+05:30  INFO 27604 --- [Thread-1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-12-12T19:45:23.310+05:30  INFO 27604 --- [Thread-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-12T19:45:23.322+05:30  INFO 27604 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-12T19:45:23.327+05:30  INFO 27604 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-12T19:45:23.335+05:30  INFO 27604 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-12T19:45:23.336+05:30  INFO 27604 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-12-12T19:45:26.338+05:30  INFO 27604 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-12-12T19:45:26.354+05:30  INFO 27604 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - deregister  status: 200
+2023-12-12T19:45:26.358+05:30  INFO 27604 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-12-12T19:45:27.385+05:30  INFO 27604 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : Starting SalesOrderApplication using Java 17.0.8.1 with PID 27604 (C:\Users\Madhur_Joshi\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\sales-order\target\classes started by Madhur_Joshi in C:\Users\Madhur_Joshi\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\sales-order)
+2023-12-12T19:45:27.385+05:30  INFO 27604 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-12-12T19:45:27.388+05:30  INFO 27604 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:9292
+2023-12-12T19:45:27.388+05:30  INFO 27604 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=sales-order-service, profiles=[default], label=null, version=d0159b8c96d3ccfcf1fe673b0141b53ea5da77fc, state=null
+2023-12-12T19:45:27.656+05:30  INFO 27604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-12T19:45:27.667+05:30  INFO 27604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 3 JPA repository interfaces.
+2023-12-12T19:45:27.736+05:30  INFO 27604 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=daf973ec-ed10-328c-8a8a-0639f7c3adec
+2023-12-12T19:45:27.758+05:30  INFO 27604 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'com.varsha.salesorder.feign.ItemsFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-12-12T19:45:27.891+05:30  INFO 27604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-12T19:45:27.891+05:30  INFO 27604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-12T19:45:27.891+05:30  INFO 27604 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-12T19:45:27.916+05:30  INFO 27604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-12T19:45:27.917+05:30  INFO 27604 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 529 ms
+2023-12-12T19:45:27.994+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-12-12T19:45:28.006+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52895525
+2023-12-12T19:45:28.007+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-12-12T19:45:28.007+05:30  INFO 27604 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/saleorder-items?createDatabaseIfNotExist=true'
+2023-12-12T19:45:28.094+05:30  INFO 27604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-12T19:45:28.101+05:30  INFO 27604 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-12T19:45:28.102+05:30  WARN 27604 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-12T19:45:28.102+05:30  WARN 27604 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-12-12T19:45:28.145+05:30  INFO 27604 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-12T19:45:28.153+05:30  INFO 27604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-12T19:45:28.382+05:30  WARN 27604 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-12T19:45:28.441+05:30  WARN 27604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-12-12T19:45:28.452+05:30  INFO 27604 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'ITEMS-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2023-12-12T19:45:29.447+05:30  INFO 27604 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-12-12T19:45:29.487+05:30  WARN 27604 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-12-12T19:45:29.506+05:30  INFO 27604 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-12T19:45:29.578+05:30  INFO 27604 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-12-12T19:45:29.581+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-12-12T19:45:29.582+05:30  INFO 27604 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-12T19:45:29.590+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-12-12T19:45:29.590+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-12-12T19:45:29.590+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-12-12T19:45:29.590+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-12-12T19:45:29.590+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-12-12T19:45:29.590+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-12-12T19:45:29.590+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-12-12T19:45:29.608+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-12-12T19:45:29.609+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-12-12T19:45:29.610+05:30  INFO 27604 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-12-12T19:45:29.611+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1702390529611 with initial instances count: 4
+2023-12-12T19:45:29.621+05:30  INFO 27604 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SALES-ORDER-SERVICE with eureka with status UP
+2023-12-12T19:45:29.621+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702390529621, current=UP, previous=STARTING]
+2023-12-12T19:45:29.621+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080: registering service...
+2023-12-12T19:45:29.626+05:30  INFO 27604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-12T19:45:29.627+05:30  INFO 27604 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2023-12-12T19:45:29.632+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - registration status: 204
+2023-12-12T19:45:29.715+05:30  WARN 27604 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'org.springframework.kafka.config.internalKafkaListenerEndpointRegistry'
+2023-12-12T19:45:29.718+05:30  INFO 27604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-12T19:45:29.719+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-12-12T19:45:29.724+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-12-12T19:45:29.724+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-12-12T19:45:32.741+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-12-12T19:45:32.759+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - deregister  status: 200
+2023-12-12T19:45:32.762+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-12-12T19:45:32.772+05:30  INFO 27604 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-12-12T19:45:32.787+05:30  INFO 27604 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-12T19:45:32.812+05:30 ERROR 27604 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Failed to start bean 'org.springframework.kafka.config.internalKafkaListenerEndpointRegistry'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) ~[spring-context-6.0.14.jar:6.0.14]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:357) ~[spring-context-6.0.14.jar:6.0.14]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:156) ~[spring-context-6.0.14.jar:6.0.14]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:124) ~[spring-context-6.0.14.jar:6.0.14]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:966) ~[spring-context-6.0.14.jar:6.0.14]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619) ~[spring-context-6.0.14.jar:6.0.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.6.jar:3.1.6]
+	at com.varsha.salesorder.SalesOrderApplication.main(SalesOrderApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.6.jar:3.1.6]
+Caused by: java.lang.IllegalStateException: No group.id found in consumer config, container properties, or @KafkaListener annotation; a group.id is required when group management is used.
+	at org.springframework.util.Assert.state(Assert.java:76) ~[spring-core-6.0.14.jar:6.0.14]
+	at org.springframework.kafka.listener.AbstractMessageListenerContainer.checkGroupId(AbstractMessageListenerContainer.java:626) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.AbstractMessageListenerContainer.start(AbstractMessageListenerContainer.java:552) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.config.KafkaListenerEndpointRegistry.startIfNecessary(KafkaListenerEndpointRegistry.java:383) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.config.KafkaListenerEndpointRegistry.start(KafkaListenerEndpointRegistry.java:328) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:179) ~[spring-context-6.0.14.jar:6.0.14]
+	... 18 common frames omitted
+
+2023-12-12T19:46:56.027+05:30  INFO 27604 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : Starting SalesOrderApplication using Java 17.0.8.1 with PID 27604 (C:\Users\Madhur_Joshi\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\sales-order\target\classes started by Madhur_Joshi in C:\Users\Madhur_Joshi\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\sales-order)
+2023-12-12T19:46:56.028+05:30  INFO 27604 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-12-12T19:46:56.029+05:30  INFO 27604 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:9292
+2023-12-12T19:46:56.029+05:30  INFO 27604 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=sales-order-service, profiles=[default], label=null, version=d0159b8c96d3ccfcf1fe673b0141b53ea5da77fc, state=null
+2023-12-12T19:46:56.306+05:30  INFO 27604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-12T19:46:56.321+05:30  INFO 27604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 3 JPA repository interfaces.
+2023-12-12T19:46:56.390+05:30  INFO 27604 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=daf973ec-ed10-328c-8a8a-0639f7c3adec
+2023-12-12T19:46:56.411+05:30  INFO 27604 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'com.varsha.salesorder.feign.ItemsFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-12-12T19:46:56.533+05:30  INFO 27604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-12T19:46:56.534+05:30  INFO 27604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-12T19:46:56.534+05:30  INFO 27604 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-12T19:46:56.560+05:30  INFO 27604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-12T19:46:56.560+05:30  INFO 27604 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 531 ms
+2023-12-12T19:46:56.628+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-12-12T19:46:56.639+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55ba2746
+2023-12-12T19:46:56.639+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-12-12T19:46:56.640+05:30  INFO 27604 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/saleorder-items?createDatabaseIfNotExist=true'
+2023-12-12T19:46:56.723+05:30  INFO 27604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-12T19:46:56.729+05:30  INFO 27604 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-12T19:46:56.729+05:30  WARN 27604 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-12T19:46:56.729+05:30  WARN 27604 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-12-12T19:46:56.767+05:30  INFO 27604 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-12T19:46:56.774+05:30  INFO 27604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-12T19:46:56.989+05:30  WARN 27604 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-12T19:46:57.047+05:30  WARN 27604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-12-12T19:46:57.057+05:30  INFO 27604 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'ITEMS-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2023-12-12T19:46:57.988+05:30  INFO 27604 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-12-12T19:46:58.025+05:30  WARN 27604 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-12-12T19:46:58.039+05:30  INFO 27604 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-12T19:46:58.099+05:30  INFO 27604 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-12-12T19:46:58.103+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-12-12T19:46:58.103+05:30  INFO 27604 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-12T19:46:58.104+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-12-12T19:46:58.104+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-12-12T19:46:58.104+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-12-12T19:46:58.104+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-12-12T19:46:58.104+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-12-12T19:46:58.104+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-12-12T19:46:58.104+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-12-12T19:46:58.119+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-12-12T19:46:58.120+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-12-12T19:46:58.121+05:30  INFO 27604 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-12-12T19:46:58.121+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1702390618121 with initial instances count: 3
+2023-12-12T19:46:58.129+05:30  INFO 27604 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SALES-ORDER-SERVICE with eureka with status UP
+2023-12-12T19:46:58.129+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702390618129, current=UP, previous=STARTING]
+2023-12-12T19:46:58.130+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080: registering service...
+2023-12-12T19:46:58.133+05:30  INFO 27604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-12T19:46:58.134+05:30  INFO 27604 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2023-12-12T19:46:58.140+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - registration status: 204
+2023-12-12T19:46:58.216+05:30  INFO 27604 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group-id-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group-id
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2023-12-12T19:46:58.220+05:30  WARN 27604 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : These configurations '[spring.json.trusted]' were supplied but are not used yet.
+2023-12-12T19:46:58.220+05:30  INFO 27604 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-12-12T19:46:58.220+05:30  INFO 27604 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-12-12T19:46:58.220+05:30  INFO 27604 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1702390618220
+2023-12-12T19:46:58.226+05:30  INFO 27604 --- [restartedMain] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-id-2, groupId=group-id] Subscribed to topic(s): created-customer
+2023-12-12T19:46:58.231+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-id-2, groupId=group-id] Resetting the last seen epoch of partition created-customer-0 to 0 since the associated topicId changed from null to HEJIZG1FTryP8VYmDlz6sg
+2023-12-12T19:46:58.231+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-id-2, groupId=group-id] Cluster ID: 6bFUzaUdSxK_E_CjG_f-wA
+2023-12-12T19:46:58.231+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Discovered group coordinator 192.168.1.46:9092 (id: 2147483647 rack: null)
+2023-12-12T19:46:58.232+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] (Re-)joining group
+2023-12-12T19:46:58.235+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Request joining group due to: need to re-join with the given member-id: consumer-group-id-2-3fc6d6c2-d1a0-4f27-b1cf-241372c7c586
+2023-12-12T19:46:58.236+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-12-12T19:46:58.236+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] (Re-)joining group
+2023-12-12T19:46:58.238+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Successfully joined group with generation Generation{generationId=5, memberId='consumer-group-id-2-3fc6d6c2-d1a0-4f27-b1cf-241372c7c586', protocol='range'}
+2023-12-12T19:46:58.238+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Finished assignment for group at generation 5: {consumer-group-id-2-3fc6d6c2-d1a0-4f27-b1cf-241372c7c586=Assignment(partitions=[created-customer-0])}
+2023-12-12T19:46:58.240+05:30  INFO 27604 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : Started SalesOrderApplication in 3.273 seconds (process running for 516.275)
+2023-12-12T19:46:58.240+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Successfully synced group in generation Generation{generationId=5, memberId='consumer-group-id-2-3fc6d6c2-d1a0-4f27-b1cf-241372c7c586', protocol='range'}
+2023-12-12T19:46:58.241+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Notifying assignor about the new Assignment(partitions=[created-customer-0])
+2023-12-12T19:46:58.241+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Adding newly assigned partitions: created-customer-0
+2023-12-12T19:46:58.242+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Setting offset for partition created-customer-0 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.1.46:9092 (id: 0 rack: null)], epoch=0}}
+2023-12-12T19:46:58.242+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-id: partitions assigned: [created-customer-0]
+2023-12-12T19:46:58.244+05:30  INFO 27604 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-12-12T19:48:59.860+05:30  INFO 27604 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-12T19:48:59.861+05:30  INFO 27604 --- [Thread-8] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SALES-ORDER-SERVICE with eureka with status DOWN
+2023-12-12T19:48:59.861+05:30  INFO 27604 --- [Thread-8] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702390739861, current=DOWN, previous=UP]
+2023-12-12T19:48:59.861+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080: registering service...
+2023-12-12T19:48:59.862+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Revoke previously assigned partitions created-customer-0
+2023-12-12T19:48:59.862+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-id: partitions revoked: [created-customer-0]
+2023-12-12T19:48:59.862+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Member consumer-group-id-2-3fc6d6c2-d1a0-4f27-b1cf-241372c7c586 sending LeaveGroup request to coordinator 192.168.1.46:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-12-12T19:48:59.863+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-12-12T19:48:59.863+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Request joining group due to: consumer pro-actively leaving the group
+2023-12-12T19:48:59.863+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-id-2, groupId=group-id] Unsubscribed all topics or patterns and assigned partitions
+2023-12-12T19:48:59.863+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-12-12T19:48:59.863+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-2, groupId=group-id] Request joining group due to: consumer pro-actively leaving the group
+2023-12-12T19:48:59.864+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - registration status: 204
+2023-12-12T19:48:59.866+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-12-12T19:48:59.866+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-12T19:48:59.866+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-12-12T19:48:59.867+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group-id-2 unregistered
+2023-12-12T19:48:59.868+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-id: Consumer stopped
+2023-12-12T19:48:59.877+05:30  INFO 27604 --- [Thread-8] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-12-12T19:48:59.882+05:30  INFO 27604 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-12T19:48:59.882+05:30  INFO 27604 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-12-12T19:48:59.887+05:30  INFO 27604 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-12-12T19:48:59.887+05:30  INFO 27604 --- [Thread-8] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-12-12T19:49:02.899+05:30  INFO 27604 --- [Thread-8] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-12-12T19:49:02.903+05:30  INFO 27604 --- [Thread-8] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - deregister  status: 200
+2023-12-12T19:49:02.911+05:30  INFO 27604 --- [Thread-8] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-12-12T19:49:04.103+05:30  INFO 27604 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : Starting SalesOrderApplication using Java 17.0.8.1 with PID 27604 (C:\Users\Madhur_Joshi\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\sales-order\target\classes started by Madhur_Joshi in C:\Users\Madhur_Joshi\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\sales-order)
+2023-12-12T19:49:04.104+05:30  INFO 27604 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-12-12T19:49:04.106+05:30  INFO 27604 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:9292
+2023-12-12T19:49:04.106+05:30  INFO 27604 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=sales-order-service, profiles=[default], label=null, version=d0159b8c96d3ccfcf1fe673b0141b53ea5da77fc, state=null
+2023-12-12T19:49:04.333+05:30  INFO 27604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-12T19:49:04.344+05:30  INFO 27604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+2023-12-12T19:49:04.404+05:30  INFO 27604 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=daf973ec-ed10-328c-8a8a-0639f7c3adec
+2023-12-12T19:49:04.425+05:30  INFO 27604 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'com.varsha.salesorder.feign.ItemsFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-12-12T19:49:04.536+05:30  INFO 27604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-12T19:49:04.537+05:30  INFO 27604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-12T19:49:04.537+05:30  INFO 27604 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-12T19:49:04.560+05:30  INFO 27604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-12T19:49:04.560+05:30  INFO 27604 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 453 ms
+2023-12-12T19:49:04.644+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-12-12T19:49:04.654+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ba07ecc
+2023-12-12T19:49:04.655+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-12-12T19:49:04.655+05:30  INFO 27604 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/saleorder-items?createDatabaseIfNotExist=true'
+2023-12-12T19:49:04.792+05:30  INFO 27604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-12T19:49:04.797+05:30  INFO 27604 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-12T19:49:04.798+05:30  WARN 27604 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-12T19:49:04.798+05:30  WARN 27604 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-12-12T19:49:04.847+05:30  INFO 27604 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-12T19:49:04.853+05:30  INFO 27604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-12T19:49:05.065+05:30  WARN 27604 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-12T19:49:05.128+05:30  WARN 27604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-12-12T19:49:05.138+05:30  INFO 27604 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'ITEMS-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2023-12-12T19:49:06.064+05:30  INFO 27604 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-12-12T19:49:06.121+05:30  WARN 27604 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-12-12T19:49:06.143+05:30  INFO 27604 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-12T19:49:06.215+05:30  INFO 27604 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-12-12T19:49:06.220+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-12-12T19:49:06.220+05:30  INFO 27604 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-12T19:49:06.222+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-12-12T19:49:06.222+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-12-12T19:49:06.222+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-12-12T19:49:06.222+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-12-12T19:49:06.222+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-12-12T19:49:06.222+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-12-12T19:49:06.222+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-12-12T19:49:06.237+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-12-12T19:49:06.238+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-12-12T19:49:06.240+05:30  INFO 27604 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-12-12T19:49:06.241+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1702390746241 with initial instances count: 4
+2023-12-12T19:49:06.253+05:30  INFO 27604 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SALES-ORDER-SERVICE with eureka with status UP
+2023-12-12T19:49:06.253+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702390746253, current=UP, previous=STARTING]
+2023-12-12T19:49:06.253+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080: registering service...
+2023-12-12T19:49:06.257+05:30  INFO 27604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-12T19:49:06.258+05:30  INFO 27604 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2023-12-12T19:49:06.280+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - registration status: 204
+2023-12-12T19:49:06.353+05:30  INFO 27604 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group-id-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group-id
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2023-12-12T19:49:06.356+05:30  INFO 27604 --- [restartedMain] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-12-12T19:49:06.356+05:30  INFO 27604 --- [restartedMain] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-12T19:49:06.356+05:30  INFO 27604 --- [restartedMain] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-12-12T19:49:06.356+05:30  INFO 27604 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group-id-3 unregistered
+2023-12-12T19:49:06.356+05:30  WARN 27604 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'org.springframework.kafka.config.internalKafkaListenerEndpointRegistry'
+2023-12-12T19:49:06.360+05:30  INFO 27604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-12T19:49:06.361+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-12-12T19:49:06.364+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-12-12T19:49:06.365+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-12-12T19:49:09.381+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-12-12T19:49:09.398+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - deregister  status: 200
+2023-12-12T19:49:09.401+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-12-12T19:49:09.410+05:30  INFO 27604 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-12-12T19:49:09.422+05:30  INFO 27604 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-12T19:49:09.426+05:30 ERROR 27604 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Failed to start bean 'org.springframework.kafka.config.internalKafkaListenerEndpointRegistry'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) ~[spring-context-6.0.14.jar:6.0.14]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:357) ~[spring-context-6.0.14.jar:6.0.14]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:156) ~[spring-context-6.0.14.jar:6.0.14]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:124) ~[spring-context-6.0.14.jar:6.0.14]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:966) ~[spring-context-6.0.14.jar:6.0.14]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619) ~[spring-context-6.0.14.jar:6.0.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.6.jar:3.1.6]
+	at com.varsha.salesorder.SalesOrderApplication.main(SalesOrderApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.6.jar:3.1.6]
+Caused by: org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:830) ~[kafka-clients-3.4.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:665) ~[kafka-clients-3.4.1.jar:na]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createRawConsumer(DefaultKafkaConsumerFactory.java:483) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createKafkaConsumer(DefaultKafkaConsumerFactory.java:451) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createConsumerWithAdjustedProperties(DefaultKafkaConsumerFactory.java:427) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createKafkaConsumer(DefaultKafkaConsumerFactory.java:394) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createConsumer(DefaultKafkaConsumerFactory.java:371) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.<init>(KafkaMessageListenerContainer.java:865) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer.doStart(KafkaMessageListenerContainer.java:380) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.AbstractMessageListenerContainer.start(AbstractMessageListenerContainer.java:557) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.ConcurrentMessageListenerContainer.doStart(ConcurrentMessageListenerContainer.java:231) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.listener.AbstractMessageListenerContainer.start(AbstractMessageListenerContainer.java:557) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.config.KafkaListenerEndpointRegistry.startIfNecessary(KafkaListenerEndpointRegistry.java:383) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.config.KafkaListenerEndpointRegistry.start(KafkaListenerEndpointRegistry.java:328) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:179) ~[spring-context-6.0.14.jar:6.0.14]
+	... 18 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to load: com.varsha.customer.entity.Customer; for event
+	at org.springframework.kafka.support.serializer.JsonSerializer.createMappings(JsonSerializer.java:188) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.support.serializer.JsonDeserializer.createMappings(JsonDeserializer.java:438) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.springframework.kafka.support.serializer.JsonDeserializer.configure(JsonDeserializer.java:418) ~[spring-kafka-3.0.13.jar:3.0.13]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:717) ~[kafka-clients-3.4.1.jar:na]
+	... 32 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com/varsha/customer/entity/Customer;
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:291) ~[spring-core-6.0.14.jar:6.0.14]
+	at org.springframework.kafka.support.serializer.JsonSerializer.createMappings(JsonSerializer.java:185) ~[spring-kafka-3.0.13.jar:3.0.13]
+	... 35 common frames omitted
+
+2023-12-12T19:52:15.193+05:30  INFO 27604 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : Starting SalesOrderApplication using Java 17.0.8.1 with PID 27604 (C:\Users\Madhur_Joshi\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\sales-order\target\classes started by Madhur_Joshi in C:\Users\Madhur_Joshi\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\sales-order)
+2023-12-12T19:52:15.193+05:30  INFO 27604 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-12-12T19:52:15.196+05:30  INFO 27604 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:9292
+2023-12-12T19:52:15.196+05:30  INFO 27604 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=sales-order-service, profiles=[default], label=null, version=d0159b8c96d3ccfcf1fe673b0141b53ea5da77fc, state=null
+2023-12-12T19:52:15.419+05:30  INFO 27604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-12T19:52:15.428+05:30  INFO 27604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+2023-12-12T19:52:15.488+05:30  INFO 27604 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=daf973ec-ed10-328c-8a8a-0639f7c3adec
+2023-12-12T19:52:15.509+05:30  INFO 27604 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'com.varsha.salesorder.feign.ItemsFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-12-12T19:52:15.622+05:30  INFO 27604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-12T19:52:15.623+05:30  INFO 27604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-12T19:52:15.623+05:30  INFO 27604 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-12T19:52:15.649+05:30  INFO 27604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-12T19:52:15.649+05:30  INFO 27604 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 453 ms
+2023-12-12T19:52:15.734+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-12-12T19:52:15.746+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@498c4824
+2023-12-12T19:52:15.746+05:30  INFO 27604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-12-12T19:52:15.746+05:30  INFO 27604 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/saleorder-items?createDatabaseIfNotExist=true'
+2023-12-12T19:52:15.847+05:30  INFO 27604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-12T19:52:15.852+05:30  INFO 27604 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-12T19:52:15.853+05:30  WARN 27604 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-12T19:52:15.853+05:30  WARN 27604 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-12-12T19:52:15.897+05:30  INFO 27604 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-12T19:52:15.905+05:30  INFO 27604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-12T19:52:16.117+05:30  WARN 27604 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-12T19:52:16.178+05:30  WARN 27604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-12-12T19:52:16.189+05:30  INFO 27604 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'ITEMS-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2023-12-12T19:52:17.108+05:30  INFO 27604 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-12-12T19:52:17.141+05:30  WARN 27604 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-12-12T19:52:17.155+05:30  INFO 27604 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-12T19:52:17.235+05:30  INFO 27604 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-12-12T19:52:17.241+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-12-12T19:52:17.241+05:30  INFO 27604 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-12T19:52:17.242+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-12-12T19:52:17.242+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-12-12T19:52:17.242+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-12-12T19:52:17.242+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-12-12T19:52:17.242+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-12-12T19:52:17.242+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-12-12T19:52:17.242+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-12-12T19:52:17.256+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-12-12T19:52:17.257+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-12-12T19:52:17.257+05:30  INFO 27604 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-12-12T19:52:17.259+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1702390937259 with initial instances count: 3
+2023-12-12T19:52:17.271+05:30  INFO 27604 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SALES-ORDER-SERVICE with eureka with status UP
+2023-12-12T19:52:17.271+05:30  INFO 27604 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702390937271, current=UP, previous=STARTING]
+2023-12-12T19:52:17.271+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080: registering service...
+2023-12-12T19:52:17.275+05:30  INFO 27604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-12T19:52:17.276+05:30  INFO 27604 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2023-12-12T19:52:17.280+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - registration status: 204
+2023-12-12T19:52:17.362+05:30  INFO 27604 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group-id-4
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group-id
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2023-12-12T19:52:17.365+05:30  WARN 27604 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : These configurations '[spring.json.trusted]' were supplied but are not used yet.
+2023-12-12T19:52:17.365+05:30  INFO 27604 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-12-12T19:52:17.365+05:30  INFO 27604 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-12-12T19:52:17.365+05:30  INFO 27604 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1702390937365
+2023-12-12T19:52:17.370+05:30  INFO 27604 --- [restartedMain] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-id-4, groupId=group-id] Subscribed to topic(s): created-customer
+2023-12-12T19:52:17.373+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-id-4, groupId=group-id] Resetting the last seen epoch of partition created-customer-0 to 0 since the associated topicId changed from null to HEJIZG1FTryP8VYmDlz6sg
+2023-12-12T19:52:17.373+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-id-4, groupId=group-id] Cluster ID: 6bFUzaUdSxK_E_CjG_f-wA
+2023-12-12T19:52:17.374+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Discovered group coordinator 192.168.1.46:9092 (id: 2147483647 rack: null)
+2023-12-12T19:52:17.374+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] (Re-)joining group
+2023-12-12T19:52:17.376+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Request joining group due to: need to re-join with the given member-id: consumer-group-id-4-f164a351-b594-4344-a576-80193b8c6823
+2023-12-12T19:52:17.376+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-12-12T19:52:17.376+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] (Re-)joining group
+2023-12-12T19:52:17.378+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Successfully joined group with generation Generation{generationId=7, memberId='consumer-group-id-4-f164a351-b594-4344-a576-80193b8c6823', protocol='range'}
+2023-12-12T19:52:17.378+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Finished assignment for group at generation 7: {consumer-group-id-4-f164a351-b594-4344-a576-80193b8c6823=Assignment(partitions=[created-customer-0])}
+2023-12-12T19:52:17.379+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Successfully synced group in generation Generation{generationId=7, memberId='consumer-group-id-4-f164a351-b594-4344-a576-80193b8c6823', protocol='range'}
+2023-12-12T19:52:17.380+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Notifying assignor about the new Assignment(partitions=[created-customer-0])
+2023-12-12T19:52:17.380+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Adding newly assigned partitions: created-customer-0
+2023-12-12T19:52:17.380+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Setting offset for partition created-customer-0 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.1.46:9092 (id: 0 rack: null)], epoch=0}}
+2023-12-12T19:52:17.381+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-id: partitions assigned: [created-customer-0]
+2023-12-12T19:52:17.381+05:30  INFO 27604 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : Started SalesOrderApplication in 3.183 seconds (process running for 835.417)
+2023-12-12T19:52:17.384+05:30  INFO 27604 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-12-12T19:52:42.121+05:30  INFO 27604 --- [RMI TCP Connection(35)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-12-12T19:52:42.122+05:30  INFO 27604 --- [RMI TCP Connection(35)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SALES-ORDER-SERVICE with eureka with status DOWN
+2023-12-12T19:52:42.122+05:30  INFO 27604 --- [RMI TCP Connection(35)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702390962122, current=DOWN, previous=UP]
+2023-12-12T19:52:42.123+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080: registering service...
+2023-12-12T19:52:42.124+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Revoke previously assigned partitions created-customer-0
+2023-12-12T19:52:42.124+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-id: partitions revoked: [created-customer-0]
+2023-12-12T19:52:42.124+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Member consumer-group-id-4-f164a351-b594-4344-a576-80193b8c6823 sending LeaveGroup request to coordinator 192.168.1.46:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-12-12T19:52:42.124+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-12-12T19:52:42.124+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Request joining group due to: consumer pro-actively leaving the group
+2023-12-12T19:52:42.124+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-id-4, groupId=group-id] Unsubscribed all topics or patterns and assigned partitions
+2023-12-12T19:52:42.124+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-12-12T19:52:42.124+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-4, groupId=group-id] Request joining group due to: consumer pro-actively leaving the group
+2023-12-12T19:52:42.127+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-12-12T19:52:42.127+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-12T19:52:42.127+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-12-12T19:52:42.129+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group-id-4 unregistered
+2023-12-12T19:52:42.129+05:30  INFO 27604 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-id: Consumer stopped
+2023-12-12T19:52:42.132+05:30  INFO 27604 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - registration status: 204
+2023-12-12T19:52:42.137+05:30  INFO 27604 --- [RMI TCP Connection(35)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-12-12T19:52:42.143+05:30  INFO 27604 --- [RMI TCP Connection(35)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-12T19:52:42.143+05:30  INFO 27604 --- [RMI TCP Connection(35)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-12-12T19:52:42.147+05:30  INFO 27604 --- [RMI TCP Connection(35)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2023-12-12T19:52:42.148+05:30  INFO 27604 --- [RMI TCP Connection(35)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-12-12T19:52:45.148+05:30  INFO 27604 --- [RMI TCP Connection(35)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-12-12T19:52:45.153+05:30  INFO 27604 --- [RMI TCP Connection(35)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - deregister  status: 200
+2023-12-12T19:52:45.155+05:30  INFO 27604 --- [RMI TCP Connection(35)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-12-12T19:52:49.750+05:30  INFO 2896 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : Starting SalesOrderApplication using Java 17.0.8.1 with PID 2896 (C:\Users\Madhur_Joshi\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\sales-order\target\classes started by Madhur_Joshi in C:\Users\Madhur_Joshi\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\sales-order)
+2023-12-12T19:52:49.753+05:30  INFO 2896 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-12-12T19:52:49.809+05:30  INFO 2896 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:9292
+2023-12-12T19:52:49.809+05:30  INFO 2896 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=sales-order-service, profiles=[default], label=null, version=d0159b8c96d3ccfcf1fe673b0141b53ea5da77fc, state=null
+2023-12-12T19:52:49.812+05:30  INFO 2896 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-12T19:52:49.812+05:30  INFO 2896 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-12T19:52:50.882+05:30  INFO 2896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-12T19:52:51.040+05:30  INFO 2896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 3 JPA repository interfaces.
+2023-12-12T19:52:51.404+05:30  INFO 2896 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=daf973ec-ed10-328c-8a8a-0639f7c3adec
+2023-12-12T19:52:51.510+05:30  INFO 2896 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'com.varsha.salesorder.feign.ItemsFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-12-12T19:52:52.214+05:30  INFO 2896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-12T19:52:52.226+05:30  INFO 2896 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-12T19:52:52.226+05:30  INFO 2896 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-12T19:52:52.311+05:30  INFO 2896 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-12T19:52:52.312+05:30  INFO 2896 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2498 ms
+2023-12-12T19:52:52.521+05:30  INFO 2896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-12T19:52:52.825+05:30  INFO 2896 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1cc02f0e
+2023-12-12T19:52:52.828+05:30  INFO 2896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-12T19:52:52.839+05:30  INFO 2896 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/saleorder-items?createDatabaseIfNotExist=true'
+2023-12-12T19:52:53.179+05:30  INFO 2896 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-12T19:52:53.248+05:30  INFO 2896 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-12T19:52:53.251+05:30  INFO 2896 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-12T19:52:53.658+05:30  INFO 2896 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-12T19:52:53.740+05:30  WARN 2896 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-12T19:52:53.741+05:30  WARN 2896 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-12-12T19:52:54.693+05:30  INFO 2896 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-12T19:52:54.771+05:30  INFO 2896 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-12T19:52:55.373+05:30  WARN 2896 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-12T19:52:55.488+05:30  WARN 2896 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-12-12T19:52:55.524+05:30  INFO 2896 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'ITEMS-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2023-12-12T19:52:57.343+05:30  INFO 2896 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-12-12T19:52:57.405+05:30  WARN 2896 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-12-12T19:52:57.432+05:30  INFO 2896 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-12T19:52:57.610+05:30  INFO 2896 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-12-12T19:52:57.667+05:30  INFO 2896 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-12-12T19:52:57.674+05:30  INFO 2896 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-12T19:52:57.707+05:30  INFO 2896 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-12-12T19:52:57.707+05:30  INFO 2896 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-12-12T19:52:57.707+05:30  INFO 2896 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-12-12T19:52:57.707+05:30  INFO 2896 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-12-12T19:52:57.707+05:30  INFO 2896 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-12-12T19:52:57.707+05:30  INFO 2896 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-12-12T19:52:57.708+05:30  INFO 2896 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-12-12T19:52:57.995+05:30  INFO 2896 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-12-12T19:52:57.999+05:30  INFO 2896 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-12-12T19:52:58.004+05:30  INFO 2896 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-12-12T19:52:58.008+05:30  INFO 2896 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1702390978008 with initial instances count: 4
+2023-12-12T19:52:58.017+05:30  INFO 2896 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SALES-ORDER-SERVICE with eureka with status UP
+2023-12-12T19:52:58.018+05:30  INFO 2896 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702390978018, current=UP, previous=STARTING]
+2023-12-12T19:52:58.020+05:30  INFO 2896 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080: registering service...
+2023-12-12T19:52:58.047+05:30  INFO 2896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-12T19:52:58.048+05:30  INFO 2896 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2023-12-12T19:52:58.067+05:30  INFO 2896 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - registration status: 204
+2023-12-12T19:52:58.193+05:30  INFO 2896 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group-id-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group-id
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2023-12-12T19:52:58.300+05:30  WARN 2896 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : These configurations '[spring.json.trusted]' were supplied but are not used yet.
+2023-12-12T19:52:58.302+05:30  INFO 2896 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-12-12T19:52:58.302+05:30  INFO 2896 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-12-12T19:52:58.302+05:30  INFO 2896 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1702390978300
+2023-12-12T19:52:58.323+05:30  INFO 2896 --- [restartedMain] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-id-1, groupId=group-id] Subscribed to topic(s): created-customer
+2023-12-12T19:52:58.348+05:30  INFO 2896 --- [restartedMain] c.v.salesorder.SalesOrderApplication     : Started SalesOrderApplication in 10.728 seconds (process running for 11.684)
+2023-12-12T19:52:58.691+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-id-1, groupId=group-id] Resetting the last seen epoch of partition created-customer-0 to 0 since the associated topicId changed from null to HEJIZG1FTryP8VYmDlz6sg
+2023-12-12T19:52:58.694+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-id-1, groupId=group-id] Cluster ID: 6bFUzaUdSxK_E_CjG_f-wA
+2023-12-12T19:52:58.695+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Discovered group coordinator 192.168.1.46:9092 (id: 2147483647 rack: null)
+2023-12-12T19:52:58.697+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] (Re-)joining group
+2023-12-12T19:52:58.710+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Request joining group due to: need to re-join with the given member-id: consumer-group-id-1-dd94303a-a347-40f1-b0b0-058236102985
+2023-12-12T19:52:58.710+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-12-12T19:52:58.710+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] (Re-)joining group
+2023-12-12T19:52:58.713+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Successfully joined group with generation Generation{generationId=9, memberId='consumer-group-id-1-dd94303a-a347-40f1-b0b0-058236102985', protocol='range'}
+2023-12-12T19:52:58.715+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Finished assignment for group at generation 9: {consumer-group-id-1-dd94303a-a347-40f1-b0b0-058236102985=Assignment(partitions=[created-customer-0])}
+2023-12-12T19:52:58.721+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Successfully synced group in generation Generation{generationId=9, memberId='consumer-group-id-1-dd94303a-a347-40f1-b0b0-058236102985', protocol='range'}
+2023-12-12T19:52:58.721+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Notifying assignor about the new Assignment(partitions=[created-customer-0])
+2023-12-12T19:52:58.723+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Adding newly assigned partitions: created-customer-0
+2023-12-12T19:52:58.732+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Setting offset for partition created-customer-0 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.1.46:9092 (id: 0 rack: null)], epoch=0}}
+2023-12-12T19:52:58.733+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-id: partitions assigned: [created-customer-0]
+2023-12-12T19:53:00.673+05:30  INFO 2896 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-12T19:53:00.673+05:30  INFO 2896 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-12T19:53:00.676+05:30  INFO 2896 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-12-12T19:57:45.948+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:57:45.948+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Cancelled in-flight FETCH request with correlation id 675 due to node 0 being disconnected (elapsed time since creation: 446ms, elapsed time since send: 446ms, request timeout: 30000ms)
+2023-12-12T19:57:45.948+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 2147483647 disconnected.
+2023-12-12T19:57:45.948+05:30  INFO 2896 --- [kafka-coordinator-heartbeat-thread | group-id] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node -1 disconnected.
+2023-12-12T19:57:45.948+05:30  INFO 2896 --- [kafka-coordinator-heartbeat-thread | group-id] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Group coordinator 192.168.1.46:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2023-12-12T19:57:45.948+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=569) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:57:48.079+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:57:48.081+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:57:50.210+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:57:50.210+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:57:50.210+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:57:52.402+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:57:52.403+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:57:54.805+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:57:54.805+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:57:54.805+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:57:57.722+05:30  INFO 2896 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-12T19:57:57.753+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:57:57.753+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:00.823+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:00.823+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:03.696+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:03.696+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:03.696+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:58:06.602+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:06.602+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:09.686+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:09.703+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:09.703+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:58:12.749+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:12.749+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:15.835+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:15.835+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:19.025+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:19.025+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:19.025+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:58:22.210+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:22.210+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:25.086+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:25.086+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:25.086+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:58:28.027+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:28.027+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:31.062+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:31.062+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:34.235+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:34.235+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:34.236+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:58:37.508+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:37.508+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:40.754+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:40.754+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:43.835+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:43.836+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:43.836+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:58:46.963+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:46.964+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:49.966+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:49.966+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:49.967+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:58:53.129+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:53.129+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:56.339+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:56.339+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:59.493+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:58:59.494+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:58:59.494+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:59:02.709+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:02.710+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:05.626+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:05.627+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:08.525+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:08.525+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:08.525+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:59:11.588+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:11.588+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:14.850+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:14.850+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:14.850+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:59:17.995+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:17.996+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:21.236+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:21.237+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:24.132+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:24.133+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:24.133+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:59:27.298+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:27.298+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:30.446+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:30.447+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:30.447+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:59:33.506+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:33.507+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:33.507+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:59:36.410+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:36.411+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:39.627+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:39.627+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:39.627+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:59:42.658+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:42.659+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:45.881+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:45.881+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:48.781+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:48.781+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:48.781+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:59:51.788+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:51.788+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:55.062+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Node 0 disconnected.
+2023-12-12T19:59:55.062+05:30  WARN 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group-id-1, groupId=group-id] Connection to node 0 (/192.168.1.46:9092) could not be established. Broker may not be available.
+2023-12-12T19:59:55.063+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group-id-1, groupId=group-id] Error sending fetch request (sessionId=160114164, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-12-12T19:59:57.707+05:30  INFO 2896 --- [RMI TCP Connection(16)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-12-12T19:59:57.708+05:30  INFO 2896 --- [RMI TCP Connection(16)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SALES-ORDER-SERVICE with eureka with status DOWN
+2023-12-12T19:59:57.708+05:30  INFO 2896 --- [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702391397708, current=DOWN, previous=UP]
+2023-12-12T19:59:57.709+05:30  INFO 2896 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080: registering service...
+2023-12-12T19:59:57.715+05:30  INFO 2896 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - registration status: 204
+2023-12-12T19:59:57.716+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Revoke previously assigned partitions created-customer-0
+2023-12-12T19:59:57.716+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-id: partitions revoked: [created-customer-0]
+2023-12-12T19:59:57.717+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-12-12T19:59:57.717+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Request joining group due to: consumer pro-actively leaving the group
+2023-12-12T19:59:57.717+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-id-1, groupId=group-id] Unsubscribed all topics or patterns and assigned partitions
+2023-12-12T19:59:57.718+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-12-12T19:59:57.718+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-id-1, groupId=group-id] Request joining group due to: consumer pro-actively leaving the group
+2023-12-12T19:59:57.718+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-12-12T19:59:57.718+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-12T19:59:57.718+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-12-12T19:59:57.723+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group-id-1 unregistered
+2023-12-12T19:59:57.723+05:30  INFO 2896 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-id: Consumer stopped
+2023-12-12T19:59:57.736+05:30  INFO 2896 --- [RMI TCP Connection(16)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-12-12T19:59:57.739+05:30  INFO 2896 --- [RMI TCP Connection(16)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-12T19:59:57.751+05:30  INFO 2896 --- [RMI TCP Connection(16)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-12T19:59:57.756+05:30  INFO 2896 --- [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-12T19:59:57.764+05:30  INFO 2896 --- [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-12T19:59:57.766+05:30  INFO 2896 --- [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-12-12T20:00:00.769+05:30  WARN 2896 --- [DiscoveryClient-1] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2023-12-12T20:00:00.770+05:30  INFO 2896 --- [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-12-12T20:00:00.786+05:30  INFO 2896 --- [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALES-ORDER-SERVICE/192.168.1.46:sales-order-service:8080 - deregister  status: 200
+2023-12-12T20:00:00.790+05:30  INFO 2896 --- [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

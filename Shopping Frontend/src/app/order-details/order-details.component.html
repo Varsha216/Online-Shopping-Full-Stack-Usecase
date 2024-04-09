@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="container">
+        <div class="row col-md-4 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+        <thead>
+            <tr>
+                <th>Item Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of selectedItems" >
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.price}}</td>
+              </tr>
+        </tbody>
+        </table>
+    </div>
+</div>

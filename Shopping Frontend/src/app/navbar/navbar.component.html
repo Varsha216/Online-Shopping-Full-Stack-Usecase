@@ -1,0 +1,11 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand">Online Shopping</a>
+    
+    <div class="userInfo">
+        <h6 *ngIf="userName">{{ userName }}</h6>
+    </div>
+    <button *ngIf="isLoggedIn && !isOrdering" type="button" class="btn btn-success" (click)="orderNow()">Order Now!</button>
+    <button *ngIf="isLoggedIn" type="button" class="btn btn-outline-danger" (click)="doLogout()">Logout</button>
+    <button *ngIf="!isLoggedIn" type="button" class="btn btn-success" (click)="doRegisteration()">Register Here!</button>
+    
+  </nav>

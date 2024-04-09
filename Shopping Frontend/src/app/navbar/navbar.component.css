@@ -1,0 +1,14 @@
+.userInfo {
+    /* background-color: black; */
+    color: white; 
+    position: absolute;
+    margin-top: 12px;
+    width: 100px;
+    right:10vh;
+    padding: 4px;
+    text-align: center;
+}
+
+h6{
+    margin: 0%;
+}

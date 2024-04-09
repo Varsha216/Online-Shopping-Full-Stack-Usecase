@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="container">
+        <div class="row col-md-5 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+        <thead>
+            <tr>
+                <th>Order Id</th>
+                <th>Date</th>
+                <th>Items Selected</th>
+                <th>Total price</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="cursor:pointer" *ngFor="let orders of orderOutput" (click)="onRowClick(orders)">
+                <td>{{orders.orderId}}</td>
+                <td>{{orders.orderDate}}</td>
+                <td>{{orders.selectedItems.length}}</td>
+                <td>{{orders.totalPrice}}</td>
+                <td>{{orders.orderDescription}}</td>
+              </tr>
+        </tbody>
+        </table>
+    </div>
+</div>

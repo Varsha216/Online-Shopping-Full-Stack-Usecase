@@ -1,0 +1,44 @@
+
+server:
+  port: 7070
+  
+spring:
+  application:
+    name: ITEMS-SERVICE
+    
+  datasource:
+    url: jdbc:mysql://localhost:3306/items?createDatabaseIfNotExist=true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      
+  cloud:
+    config:
+      enabled: true
+    
+  config:
+    import: configserver:http://localhost:9292
+      
+ 
+#for zipkin server
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  tracing:
+    sampling:
+      probability: 1.0
+ 
+      
+logging:
+  file:
+    name: logFile.log
+    
+    
